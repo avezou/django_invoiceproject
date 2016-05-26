@@ -15,23 +15,23 @@ my current use case.
 
 To install the project clone the repository, change to the django_invoiceproject
 directory, and install the requirements with
-pip install -r requirements.txt. Make sure this is done in a virtualenv.
+`pip install -r requirements.txt`. Make sure this is done in a virtualenv.
 
 Postfix is used to email customers the invoices.
 
 Make sure that postfix is installed and configured.
 
 For Ubuntu systems:
-sudo apt-get install postfix will install it.
+`sudo apt-get install postfix` will install it.
 
 To configure it:
-cp /usr/share/postfix/main.cf.debian /etc/postfix/main.cf
+`cp /usr/share/postfix/main.cf.debian /etc/postfix/main.cf
 Add the following lines to main.cf:
 
 mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
-mydestination = localhost
+mydestination = localhost`
 
-Then, reload this config file: /etc/init.d/postfix reload
+Then, reload this config file: `/etc/init.d/postfix reload`
 
 For more information checkout the postfix documentation
 
@@ -41,8 +41,8 @@ If this is successfull, you are all done for sending emails
 Lastly, configure your postgres database.
 This project assume that you have created a directory called otm unser /etc/
 and created a pass and secret files containing your db user password and your
-djangi secret key respectively. So, the db user password is under /etc/otm/pass
-and the secret key is at /etc/otm/secret
+djangi secret key respectively. So, the db user password is under `/etc/otm/pass`
+and the secret key is at `/etc/otm/secret`
 If you want to change the email host and information, change the configuration
 in the settings.py file
 
@@ -50,9 +50,9 @@ in the settings.py file
 ## Usage
 
 Once all the required packaged are installed in virtualenv and postfix setup
-Run: python manage.py migrate to create the database tables
-Then create a superuser: python mange.py createsuperuse,
-Finally run the development server: python manage.py runserver
+Run: `python manage.py migrate` to create the database tables
+Then create a superuser: `python mange.py createsuperuser`,
+Finally run the development server: `python manage.py runserver`
 Then go to localhost:8000/admin. Login with the super user credentials,
 you should be able to add your business information, and other goodies.
 
