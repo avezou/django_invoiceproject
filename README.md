@@ -9,11 +9,13 @@ fit other use cases. The invoiceapp relies on Service, Pet, Customer, and
 Address. As of now, Address is the only published app. It can be installed with
 pip install django-simple-address (address in INSTALLED_APPS). I do not plan on
 publishing the services or pets apps as they are very simple and specific to
-my current use case.
+my current use case. I may publish them bundled with the invoiceapp as it is
+dependent on them.
 
 ## Installation
 
-To install the project clone the repository, change to the django_invoiceproject
+To install the project clone the repository or download the project as a zip and
+extract it. Change to the django_invoiceproject
 directory, and install the requirements with
 `pip install -r requirements.txt`. Make sure this is done in a virtualenv.
 
@@ -25,11 +27,11 @@ For Ubuntu systems:
 `sudo apt-get install postfix` will install it.
 
 To configure it:
-`cp /usr/share/postfix/main.cf.debian /etc/postfix/main.cf
+`cp /usr/share/postfix/main.cf.debian /etc/postfix/main.cf`
 Add the following lines to main.cf:
 
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
-mydestination = localhost`
+`mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128`
+`mydestination = localhost`
 
 Then, reload this config file: `/etc/init.d/postfix reload`
 
@@ -68,4 +70,4 @@ you should be able to add your business information, and other goodies.
 
 ## License
 
-Look at the LICENSE file at the root of the project
+Look at the [LICENSE](LICENSE) file at the root of the project
