@@ -1,11 +1,7 @@
 from django.db import models
-from localflavor.us.models import USStateField
-from localflavor.us.models import PhoneNumberField
-from django.contrib.gis.db import models as models2
-from django.utils.translation import ugettext as _
 
 from pets.models import Pet
-from django_simple_address import Address
+from address.models import Address
 
 
 class Customer(models.Model):

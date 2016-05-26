@@ -1,6 +1,5 @@
 from django.contrib import admin
-from customers.models import Customer, Address
-from .forms import ZipAdminForm
+from customers.models import Customer
 
 
 class PetInline(admin.TabularInline):
@@ -22,18 +21,4 @@ class CustomerAdmin(admin.ModelAdmin):
     ]
 
 
-class AddressAdmin(admin.ModelAdmin):
-    """
-    Customize address forms and display here
-    """
-    form = ZipAdminForm
-    list_display = ('state', 'city', 'address_1',)
-    list_filter = ('city', 'state', 'zip_code',)
-    search_fields = ('address_1', 'city', 'state', 'zip_code')
-
-    def get_changelist_form(self, request, **kwargs):
-        return ZipAdminForm
-
-
-admin.site.register(Address, AddressAdmin)
 admin.site.register(Customer, CustomerAdmin)
