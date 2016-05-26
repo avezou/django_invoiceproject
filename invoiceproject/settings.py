@@ -152,4 +152,4 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = 'Server <server@apfware.com>'
+DEFAULT_FROM_EMAIL = 'Server <server@mail.com>'
