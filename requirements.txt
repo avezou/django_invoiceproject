@@ -1,6 +1,6 @@
 colorama==0.3.7
 dj-database-url==0.4.1
-Django==1.9.6
+Django==1.11.29
 django-grappelli==2.8.1
 django-localflavor==1.3
 django-simple-address==0.1
